@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to JavaScript</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 20px; 
+      color: #333;
+    }
+    #output { 
+      margin-top: 20px; 
+      line-height: 1.6; 
+    }
+    h3 { 
+      color: #0056b3; 
+      border-bottom: 1px solid #ccc; 
+      padding-bottom: 5px; 
+      margin-top: 20px;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting"></h1>
+
+  <div id="output"></div>
+
+  <script>
+    // ===== Question 1 =====
+    document.getElementById("greeting").textContent = "Welcome to JavaScript";
+
+    // ===== Question 2 =====
+    function question2() {
+      let studentName = "Najmiddin";   
+      let studentAge = 19;   
+      const universityName = "Albukhary International University";
+
+      const output = document.getElementById("output");
+      output.innerHTML += `
+        <h3>Question 2</h3>
+        <p><strong>Name:</strong> ${studentName}</p>
+        <p><strong>Age:</strong> ${studentAge}</p>
+        <p><strong>University:</strong> ${universityName}</p>
+      `;
+    }
+
+    function question3() {
+      let studentName = "Sarah";
+      let studentAge = 19;
+      let courseFee = 2500.50;
+      let isRegistered = true;
+      let studentAddress = null;
+
+      const output = document.getElementById("output");
+      
+      output.innerHTML += `
+        <h3>Question 3a: Values</h3>
+        <p><strong>Name:</strong> ${studentName}</p>
+        <p><strong>Age:</strong> ${studentAge}</p>
+        <p><strong>Course Fee:</strong> ${courseFee}</p>
+        <p><strong>Is Registered:</strong> ${isRegistered}</p>
+        <p><strong>Address:</strong> ${studentAddress}</p>
+      `;
+
+      output.innerHTML += `
+        <h3>Question 3b: Data Types</h3>
+        <p><strong>Name type:</strong> ${typeof studentName}</p>
+        <p><strong>Age type:</strong> ${typeof studentAge}</p>
+        <p><strong>Course Fee type:</strong> ${typeof courseFee}</p>
+        <p><strong>Is Registered type:</strong> ${typeof isRegistered}</p>
+        <p><strong>Address type:</strong> ${typeof studentAddress} <em>(известная особенность JS: typeof null === "object")</em></p>
+      `;
+    }
+
+    question2();
+    question3();
+  </script>
+</body>
+</html>
